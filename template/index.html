@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>מערכת ניהול שיעורים</title>
+        <script src="http://127.0.0.1:8000/src/jquery.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <script src="http://127.0.0.1:8000/src/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/src/main.css">
+    </head>
+    <body>
+
+            <img src="src/picture2.png" class="logo">
+            <div class="bgDARK" style="display: none;"></div>
+            <div class="master">
+                <button class="button-74"  id="exit">
+                    יציאה
+                 </button>
+                <div class="selection" style="display: none;">
+                    <button class="button-74" id="show_report_general" style="display: none;">
+                        דו״ח חודשי 
+                    </button>
+                    <button class="button-74" id="show_report_salary" style="display: none;">
+                        דו״ח שכר
+                    </button>
+                    <button class="button-74"  id="newStudent">
+                        + תלמיד חדש 
+                    </button>
+                    <button  class="button-74"  id="newLesson">
+                        + שיעור חדש 
+                    </button>
+                    <button class="button-74"  id="newTeacher">
+                        + עובד חדש
+                    </button>
+                    
+                </div>
+                <div id="report_general" style="display: none;" ></div>
+                <div id="report_salary" style="display: none;" ></div>
+                        
+                    
+                
+                <div id="newStudentForm" style="display: none;" >
+                        
+                    <div class="miniBox">
+                        <div class="section">
+                            <input type="text" class="button-23"  id="firstname_newStudent" placeholder="שם פרטי של התלמיד..." required />
+                        </div>
+                        <div class="section">
+                            <input type="text" class="button-23"  id="lastname_newStudent" placeholder="שם משפחה של התלמיד..." required/>
+                        </div>
+                        <div class="section">
+                            <input type="text" class="button-23"  id="id_newStudent"   placeholder="ת״ז של התלמיד..."  required />
+                        </div>
+                        <div class="section">
+                            <input type="text" class="button-23"  id="address_newStudent"  placeholder="כתובת מגורים של התלמיד.." required />
+                        </div>
+                        <button id="newStudentSendForm" class="button-23" >הוספה</button>
+                    </div>
+                </div>
+            
+            
+                <div id="newTeacherForm" style="display: none;" >
+                    <div class="miniBox">
+                        <div class="section">
+                            <input type="text" class="button-23" id="firstname_newTeacher" placeholder="שם פרטי של העובד..." required />
+                        </div>
+                        <div class="section">
+                            <input type="text" class="button-23"  id="lastname_newTeacher" placeholder="שם משפחה של העובד..." required />
+                        </div>
+                        <div class="section">
+                            <input type="text" class="button-23"  id="id_newTeacher"   placeholder="ת״ז של העובד..." required />
+                        </div>
+                        <div class="section">
+                            <input type="text" class="button-23"  id="address_newTeacher"  placeholder="כתובת מגורים של העובד.." required />
+                        </div>
+                        <div class="section">
+                            <input type="number" class="button-23"  id="SalaryPerHour_newTeacher"  placeholder="שכר שעתי..." required />
+                        </div>
+                        <div class="section">
+                            <input type="text" class="button-23"  id="username_newTeacher"  placeholder=" משתמש..." required />
+                        </div>
+                        <div class="section">
+                            <input type="password" class="button-23"  id="password_newTeacher"  placeholder="סיסמה.."  required/>
+                        </div>
+                        
+                        <div class="section">
+                            הרשאה
+                            <select class="button-23" id="permission_newTeacher">
+                                <option value="1">קביעת שיעורים</option>
+                                <option value="2">ניהול ודוחות</option>
+
+                            </select>
+                        </div>
+                        <div class="section">
+                            <button id="newTeacherSendForm" class="button-23">הוספה</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="newLessonForm" style="display: none;" >
+                    <div class="bgDARK" ></div>
+                    <div class="miniBox">
+                        <input type="text" id="name_newLesson"  placeholder="שם השיעור..."  required />
+                        <input type="text" id="price_newLesson"  placeholder="מחיר השיעור..." requiredx />
+                        חדר
+                        <select id="room">
+                            <option value="blue">כחול</option>
+                            <option value="green">ירוק</option>
+                            <option value="red">אדום</option>
+                            <option value="orange">כתום</option>
+                            <option value="pink">ורוד</option>
+
+                        </select>
+                        מורה
+                        <select id="teacher_newLesson">
+
+
+                        </select>
+                        <button id="newLessonSendForm">הוספה</button>
+                    </div>
+                </div>
+
+
+                    <div class="claenderMaster">
+                        <p>
+                            <select class="button-23" id="y">
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+
+                            </select>
+                            <select class="button-23" id="m">
+                                <option value="1">ינואר</option>
+                                <option value="2">פבואר</option>
+                                <option value="3">מרץ</option>
+                                <option value="4">אפריל</option>
+                                <option value="5">מאי</option>
+                                <option value="6">יוני</option>
+                                <option value="7">יולי</option>
+                                <option value="8">אוגוסט</option>
+                                <option value="9">ספטמבר</option>
+                                <option value="10">אוקטובר</option>
+                                <option value="11">נובמבר</option>
+                                <option value="12">דצמבר</option>
+                            </select>
+                        </p>
+                    
+
+
+                    <div class="calendar"></div>
+                    <div id="dateForNewSchedule" data-schedule="ff" style="display:none;"></div>
+                    <div id="newScheduleForm" class="miniBox" style="display: none;" >
+                        <div class="section">
+                            <button class="" id="newSchedule_times"></button>
+                        </div>
+                        <div class="section">
+                            עבור התלמיד
+                        </div>
+                        <div class="section">
+                            <select class="button-23" id="newSchedule_students"></select>
+                        </div>
+                        <div class="section">
+                            שיעור
+                        </div>
+                        <div class="section">
+                            <select class="button-23" id="newSchedule_lessons"></select>
+                        </div>
+                        <div class="section">
+                            <button id="newScheduleSend" class="button-74">קביעת שיעור</button>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="dayResOut" style="display: none;" >
+                        <div class="dayRes" >
+                            <div class="hourMaster" data-hour="10:00">10:00<div class="hour"></div></div>
+                            <div class="hourMaster" data-hour="11:00">11:00<div class="hour" ></div></div>
+                            <div class="hourMaster" data-hour="12:00">12:00<div class="hour"></div></div>
+                            <div class="hourMaster" data-hour="13:00">13:00<div class="hour"></div></div>
+                            <div class="hourMaster" data-hour="14:00">14:00<div class="hour"></div></div>
+                            <div class="hourMaster" data-hour="15:00">15:00<div class="hour" ></div></div>
+                            <div class="hourMaster" data-hour="16:00">16:00<div class="hour" ></div></div>
+                            <div class="hourMaster" data-hour="17:00">17:00<div class="hour" ></div></div>
+                            <div class="hourMaster" data-hour="18:00">18:00<div class="hour" ></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <body>
+</html>

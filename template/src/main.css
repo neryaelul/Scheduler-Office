@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+    
+body {
+    background-color: #FCF4D1;
+    height: 100%;
+  }
+  
+.master{
+    direction: rtl;
+    text-align: center;
+}
+.selection{
+    padding: 5px;
+}
+.section{
+    width: 100%;
+    margin: 6px;
+    /* text-align: right; */
+}
+.claenderMaster{
+    margin-top: 30px;
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+
+.day{
+    padding: 5px;
+    font-family: "Abril Fatface", sans-serif;
+    
+}
+.dayNumber{
+    padding: 5px;
+    font-size: 40px;
+    font-family: "Abril Fatface", sans-serif;
+    
+}
+.date {
+    display: flex;
+    height: 100px;
+    border: 1px dashed #333;
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1); */
+}
+.date:hover {
+    display: flex;
+    height: 100px;
+    background: #f8e9a0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1); */
+}
+.dayResOut{
+    width: 80%;
+    position: fixed;
+    top: 100px;
+    background-color: #FCF4D1;
+    padding: 60px;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+.dayRes{
+    height: 500px;
+    overflow-y: scroll;
+
+}
+.miniBox{
+    width: 40%;
+    position: fixed;
+    top: 100px;
+    background-color: #FCF4D1;
+    padding: 60px;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+.bgDARK{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 8000px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.hourMaster {
+    display: flex;
+    height: 100px;
+    /* background: #f1ebff; */
+    cursor: pointer;
+    font-family: "Abril Fatface", sans-serif;
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1); */
+    border-top: 1px dashed #333;
+}
+.hourMaster:hover{
+    display: flex;
+    height: 100px;
+    /* background: #f1ebff; */
+    border-top: 1px solid #ea4bff;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0,0.2);
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1); */
+}
+.hour{
+    display: flex;
+    
+}
+.meetBlue{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(24 115 255 / 75%);
+    color: #fff;
+}
+.meetPink{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255 24 129 / 75%);
+    color: #fff;
+}
+.meetGreen{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(81 215 57 / 75%);
+    color: #fff;
+}
+.meetOrange{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255, 182, 24, 0.75);
+    color: #fff;
+}
+.meetRed{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255, 70, 70, 0.75);
+    color: #fff;
+}
+#newSchedule_times{
+    border: 1px dashed #333;
+    padding: 20px;
+    font-size: 30px;
+    font-family: "Abril Fatface", sans-serif;
+    background-color: #fee6e3;
+}
+.logo{
+    width: 200px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+
+    /* CSS */
+    .button-56 {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    .button-56:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+    }
+
+    .button-56:hover:after {
+    transform: translate(0, 0);
+    }
+
+    .button-56:active {
+    background-color: #ffdeda;
+    outline: 0;
+    }
+
+    .button-56:hover {
+    outline: 0;
+    }
+
+    @media (min-width: 768px) {
+    .button-56 {
+        padding: 0 40px;
+    }
+    }
+    .button-9 {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    .button-9:disabled {
+    cursor: default;
+    }
+
+    .button-9:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+    }
+
+        /* CSS */
+        .button-23 {
+        background-color: #FFFFFF;
+        border: 1px solid #222222;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #222222;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        margin: 0;
+        outline: none;
+        padding: 13px 23px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        touch-action: manipulation;
+        transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+        user-select: none;
+        -webkit-user-select: none;
+        width: auto;
+        }
+
+        .button-23:focus-visible {
+        box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+        transition: box-shadow .2s;
+        }
+
+        .button-23:active {
+        background-color: #F7F7F7;
+        border-color: #000000;
+        transform: scale(.96);
+        }
+
+        .button-23:disabled {
+        border-color: #DDDDDD;
+        color: #DDDDDD;
+        cursor: not-allowed;
+        opacity: 1;
+        }
+
+        /* CSS */
+        .button-53 {
+        background-color: #ccddbb;
+        border: 0 solid #E5E7EB;
+        box-sizing: border-box;
+        color: #000000;
+        font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 700;
+        justify-content: center;
+        line-height: 1.75rem;
+        padding: .75rem 1.65rem;
+        position: relative;
+        text-align: center;
+        text-decoration: none #000000 solid;
+        text-decoration-thickness: auto;
+        max-width: 460px;
+        position: relative;
+        cursor: pointer;
+        transform: rotate(-2deg);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        margin: 7px;
+        }
+
+        .button-53:focus {
+        outline: 0;
+        }
+
+        .button-53:after {
+        content: '';
+        position: absolute;
+        border: 1px solid #000000;
+        bottom: 4px;
+        left: 4px;
+        width: calc(100% - 1px);
+        height: calc(100% - 1px);
+        }
+
+        .button-53:hover:after {
+        bottom: 2px;
+        left: 2px;
+        }
+
+
+        /* CSS */
+        .button-74 {
+        background-color: #fbeee0;
+        border: 2px solid #422800;
+        border-radius: 30px;
+        box-shadow: #422800 4px 4px 0 0;
+        color: #422800;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 0 18px;
+        line-height: 50px;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        margin: 5px;
+        }
+
+        .button-74:hover {
+        background-color: #fff;
+        }
+
+        .button-74:active {
+        box-shadow: #422800 2px 2px 0 0;
+        transform: translate(2px, 2px);
+        }
+
+        @media (min-width: 768px) {
+            .button-74 {
+                min-width: 120px;
+                padding: 0 25px;
+            }
+        }
+
+        .hovertext:before {
+            content: attr(data-hover);
+            visibility: hidden;
+            opacity: 0;
+            width: max-content;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 5px;
+            transition: opacity 1s ease-in-out;
+          
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 110%;
+          }
+        .ThisDateHour{
+            z-index: 1000;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+          }
+          
+          .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+          
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+          }
+          
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+          }
+          #exit{
+            position: fixed;
+            top: 40px;
+            left: 40px;
+          }
+          table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+          }
+          th, td {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            padding-right: 40px;
+          }
