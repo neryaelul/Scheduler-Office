@@ -14,23 +14,21 @@ requirements.txt: List of Python dependencies for the project.
 Setup & Installation
 Clone the Repository:
 
-bash
-Copy code
-git clone https://github.com/neryaelul/Scheduler-with-Python-JS.git
+``` Copy code
+git clone https://github.com/neryaelul/Scheduler-with-Python-JS.git ```
 Navigate to the Project Directory:
 
-arduino
-Copy code
-cd Scheduler-with-Python-JS
+
+```cd Scheduler-with-Python-JS```
 Install Dependencies:
 
-Copy code
-pip install -r requirements.txt
+```
+pip install -r requirements.txt```
 Run the Application:
 
-css
+
 Copy code
-python main.py
+```python main.py```
 Features
 Task Management: Add, update, and delete tasks.
 Appointment Scheduling: Schedule and manage appointments.
