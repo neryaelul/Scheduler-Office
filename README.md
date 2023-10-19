@@ -11,29 +11,30 @@ db.py: Python file for database operations.
 hadar.sql: SQL file.
 main.py: Main Python script for the application.
 requirements.txt: List of Python dependencies for the project.
-Setup & Installation
-Clone the Repository:
+
+## Setup & Installation
+
+### Clone the Repository:
 
 ```
-code
 git clone https://github.com/neryaelul/Scheduler-with-Python-JS.git
 ```
 Navigate to the Project Directory:
 
 
-```cd Scheduler-with-Python-JS```
-Install Dependencies:
+``` cd Scheduler-with-Python-JS ```
+### Install Dependencies:
 
 ```
 pip install -r requirements.txt```
-Run the Application:
+
 ```
 
-Copy code
+### Run the Application:
 ``` python main.py ```
 
 
-## Features
+### Features
 Task Management: Add, update, and delete tasks.
 Appointment Scheduling: Schedule and manage appointments.
 Languages Used
