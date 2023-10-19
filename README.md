@@ -27,7 +27,7 @@ Install Dependencies:
 ```
 pip install -r requirements.txt```
 Run the Application:
-
+```
 
 Copy code
 ``` python main.py ```
