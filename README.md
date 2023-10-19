@@ -27,7 +27,6 @@ Navigate to the Project Directory:
 
 ```
 pip install -r requirements.txt
-
 ```
 
 ### Run the Application:
