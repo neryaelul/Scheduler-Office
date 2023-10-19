@@ -1,7 +1,7 @@
 # Scheduler-with-Python-JS
 A scheduling application built using Python and JavaScript.
 
-Overview
+## Overview
 This project is a scheduling application that allows users to manage their tasks and appointments. It is developed using Python for backend operations and JavaScript for frontend interactions.
 
 Files & Directories
@@ -30,8 +30,10 @@ Run the Application:
 
 
 Copy code
-```python main.py```
-Features
+``` python main.py ```
+
+
+##Features
 Task Management: Add, update, and delete tasks.
 Appointment Scheduling: Schedule and manage appointments.
 Languages Used
