@@ -14,8 +14,10 @@ requirements.txt: List of Python dependencies for the project.
 Setup & Installation
 Clone the Repository:
 
-``` Copy code
-git clone https://github.com/neryaelul/Scheduler-with-Python-JS.git ```
+```
+code
+git clone https://github.com/neryaelul/Scheduler-with-Python-JS.git
+```
 Navigate to the Project Directory:
 
 
