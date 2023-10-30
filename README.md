@@ -8,7 +8,7 @@ Files & Directories
 __pycache__: Contains Python cache files.
 template: Directory containing template files.
 db.py: Python file for database operations.
-hadar.sql: SQL file.
+main.sql: SQL file.
 main.py: Main Python script for the application.
 requirements.txt: List of Python dependencies for the project.
 
