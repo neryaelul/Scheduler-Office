@@ -1,4 +1,4 @@
-# Scheduler-with-Python-JS
+# Scheduler-with-Python-&-JS
 A scheduling application built using Python and JavaScript.
 
 ## Overview
